@@ -1,4 +1,4 @@
-require 'action_assets/railtie' if defined?(Rails)
+require 'action_assets/engine'
 
 module ActionAssets
 end

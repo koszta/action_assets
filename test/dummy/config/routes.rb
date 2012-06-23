@@ -1,7 +1,7 @@
 Dummy::Application.routes.draw do
-  get "dummy/foo"
+  get 'dummy/foo'
 
-  get "dummy/bar"
+  get 'dummy/bar'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
