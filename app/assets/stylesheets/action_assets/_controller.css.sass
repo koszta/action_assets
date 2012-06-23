@@ -1,3 +1,4 @@
-= controller ($name)
-  &[data-controller='#{$name}']
-    @content
+= controller ($names)
+  @each $name in $names
+    &[data-controller='#{$name}']
+      @content

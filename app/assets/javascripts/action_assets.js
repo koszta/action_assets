@@ -1,1 +1,1 @@
-//= require_tree 'action_assets'
+//= require_tree './action_assets'

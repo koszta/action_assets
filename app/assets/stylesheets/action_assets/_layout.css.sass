@@ -1,3 +1,4 @@
-= layout ($name)
-  &[data-layout='#{$name}']
-    @content
+= layout ($names)
+  @each $name in $names
+    &[data-layout='#{$name}']
+      @content

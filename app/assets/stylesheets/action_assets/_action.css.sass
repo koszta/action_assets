@@ -1,3 +1,4 @@
-= action ($name)
-  &[data-action='#{$name}']
-    @content
+= action ($names)
+  @each $name in $names
+    &[data-action='#{$name}']
+      @content
