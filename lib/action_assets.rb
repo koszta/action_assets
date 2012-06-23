@@ -1,0 +1,2 @@
+module ActionAssets
+end
