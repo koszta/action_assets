@@ -2,7 +2,7 @@
 
 **ActionAssets for assets following your structure standards**. Previously your structure ended in controllers and views. Sadly, after those, what you have is only empty CSS & javascript files. ActionAssets makes it easier to follow your standards when writing SASS/SCSS or javascript/coffeescript.
 
-ActionAssets ads helpers which generate a tag which will contain the actual controller, the action and the template. It provides you a jquery plugin to make your javascript look nicer and provides sass mixins for your SASS/SCSS.
+ActionAssets adds helpers which generate a tag which will contain the actual controller, the action and the template. It provides you a jquery plugin to make your javascript look nicer and provides sass mixins for your SASS/SCSS.
 
 ## Using
 
@@ -16,7 +16,7 @@ Just insert it to your bundle.
 
 Put an action_assets_tag in your layout
 
-    <%= action_asset_tag do %>
+    <%= action_assets_tag do %>
       <head>
         <title>ActionAssets is cool</title>
       </head>
@@ -26,7 +26,7 @@ Put an action_assets_tag in your layout
 
 or preferably in HAML
 
-    = action_asset_tag do
+    = action_assets_tag do
       %head
         %title ActionAssets is cool
       %body
@@ -36,12 +36,12 @@ If you want to use it on another tag, you can put it to body of course.
     %html
       %head
         %title ActionAssets is cool
-      = action_asset_tag :body do
+      = action_assets_tag :body do
         %p It works!
 
 And also to a div. In the case of using div, don't forget to add an id, because it makes it faster for the browser to find it.
 
-    = action_asset_tag :div, id: :wrapper do
+    = action_assets_tag :div, id: :wrapper do
       %p It works!
 
 If you want to use purely HAML tags, you can!

@@ -1,6 +1,6 @@
 module ActionAssetsTagHelper
   
-  def active_assets_tag name = :html, options = {}, &block
+  def action_assets_tag name = :html, options = {}, &block
     options.reverse_merge! action_assets_attributes
     content_tag name, options, &block
   end
