@@ -6,8 +6,10 @@ module ActionAssetsTagHelper
   end
   
   def action_assets_attributes
+    layout = controller.send(:_layout)
+    layout = layout.virtual_path if layout.respond_to? :virtual_path
     {data: {controller: params[:controller], action: params[:action],
-      layout: controller.send(:_layout).virtual_path}}
+      layout: layout}}
   end
   
 end
