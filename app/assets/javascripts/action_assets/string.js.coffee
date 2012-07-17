@@ -6,5 +6,11 @@ String::constantize = () ->
     undefined
 
 String::camelize = ->
-    @replace /(?:^|[-_])(\w)/g, (_, c) ->
-      (if c then c.toUpperCase() else '')
+  @replace /(?:^|[-_/])(\w)/g, (s, c) ->
+    if c
+      if s.indexOf('/') == 0
+          ".prototype.#{c.toUpperCase()}"
+        else
+          c.toUpperCase()
+    else
+      ''
