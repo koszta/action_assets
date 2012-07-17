@@ -7,6 +7,7 @@ $.fn.actionAssetsTag = (event, on_error = ->) ->
         event: event
         selector: @
   		  try
-  			  "#{params.controller.camelize()}Script".constantize().prototype[params.action](params)
+  			  script = new ("#{params.controller.camelize()}Script".constantize())(params)
+  			  script[params.action]()
   		  catch error
   			  on_error(error)
