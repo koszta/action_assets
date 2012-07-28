@@ -1,9 +1,11 @@
 String::constantize = () ->
-  if @.match /[A-Z][A-z]*/
-    eval("var that = #{@}")
-    that
+  if @.match /[A-Z][a-z]\.*/
+    object = window
+    $.each @.split('.'), ->
+      object = object[@]
   else
-    undefined
+    object = undefined
+  object
 
 String::camelize = ->
   @replace /(?:^|[-_/])(\w)/g, (s, c) ->
