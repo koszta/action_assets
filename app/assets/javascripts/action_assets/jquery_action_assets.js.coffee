@@ -2,7 +2,7 @@ $.fn.actionAssetsTag = (event) ->
     @.each ->
       params =
         controller: $(@).attr('data-controller')
-    		 action: $(@).attr('data-action')
+        action: $(@).attr('data-action')
         layout: $(@).attr('data-layout')
         event: event
         selector: @
